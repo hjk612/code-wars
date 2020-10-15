@@ -9,7 +9,7 @@ $$
 declare 
   age_in_years integer;
 begin 
-  select date_part('year',now()) - date_part('year', dob)
+  select date_part('year',age(dob))
     into age_in_years;
     
   return age_in_years;
